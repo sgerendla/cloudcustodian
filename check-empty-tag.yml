@@ -1,7 +1,5 @@
 policies:
 - name: ec2-tag-compliance
-  mode:
-   role: arn:aws:iam::053502424403:role/CloudCustodian
   resource: ec2
   comment: |
     Find all instances that are not conformant
