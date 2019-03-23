@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'cloudcustodian/c7n' }
+        docker { 
+            image 'cloudcustodian/c7n'
+            args '--entrypoint=\'\''
+        }
     }
     stages {
         stage('Load virtualenvironment') {
