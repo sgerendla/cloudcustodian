@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "AWS_DEFAULT_REGION=us-west-1 custodian run -v -s --output-dir=. check-empty-tag.yml"
+                sh "AWS_DEFAULT_REGION=us-west-1 c7n run -v -s --output-dir=. check-empty-tag.yml"
             }
         }
     }
