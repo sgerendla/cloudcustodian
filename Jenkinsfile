@@ -4,10 +4,14 @@ pipeline {
     }
     stages {
         stage('Load virtualenvironment') {
-            sh "source /app/bin/activate"
+            steps {
+                sh "source /app/bin/activate"
+            }
         }
         stage('Test') {
-            sh "AWS_DEFAULT_REGION=us-west-1 custodian run --output-dir=. check-empty-tag.yml"
+            steps {
+                sh "AWS_DEFAULT_REGION=us-west-1 custodian run --output-dir=. check-empty-tag.yml"
+            }
         }
     }
 }
