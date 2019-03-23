@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'amazonlinux-with-cc' }
+        docker { image 'srinivasger/amazonlinux-with-custodian' }
     }
     stages {
         stage('Setup VirtualEnvironment')
