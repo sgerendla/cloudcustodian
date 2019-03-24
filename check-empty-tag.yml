@@ -3,7 +3,7 @@ policies:
   resource: ec2
   comment: |
     Find all instances that are not conformant
-    to tagging policies, and stop them.
+    to tagging policies, and stop them. Test merge changes
   filters:
     - "tag:Name": absent
   actions:
